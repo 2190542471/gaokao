@@ -23,12 +23,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <![endif]-->
 </head><body>
 
-<!--下面是背景视频-->
-<div class="videocontainer">
-    <video class="fullscreenvideo" poster="__ROOT__/Themes/tdt/Asset/images/loginbg.jpg" id="bgvid" playsinline="" autoplay="" muted="" loop="">
-        <source src="https://vd4.bdstatic.com/mda-kkipyu7p6b91hths/v1-cae/hd/mda-kkipyu7p6b91hths.mp4?auth_key=1620502562-0-0-0c6d5088e25e87f3be31cc73944dc653&bcevod_channel=searchbox_feed&pd=1&pt=3&abtest=all " type="video/mp4">
-    </video>
-</div>
+
 
 <div class="container demo-1">
 	<div class="content">
@@ -64,4 +59,41 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script src="js/demo-2.js"></script>
 <!-- /js files -->
 </body>
+
+<!--autoplay自动播放 muted使其静音 loop循环播放-->
+<head>
+    <style>
+        video{
+            position: fixed;
+            right:0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+             height: auto;
+             z-index: -9999;
+        }
+        #d1{
+            opacity: 0.5;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+    </style>
+    <!-- <script>       ****0.5倍速播放
+        var video= document.getElementById('v1');
+        video.playbackRate = 0.5;
+    </script> -->
+</head>
+<body>
+    <video id="v1" autoplay muted loop style="width: 100%"><!--autoplay自动播放 muted使其静音 loop循环播放-->
+        <source src="https://vd4.bdstatic.com/mda-kkipyu7p6b91hths/v1-cae/hd/mda-kkipyu7p6b91hths.mp4?auth_key=1620502562-0-0-0c6d5088e25e87f3be31cc73944dc653&bcevod_channel=searchbox_feed&pd=1&pt=3&abtest=all ">
+    </video>
+    <div id="d1">
+        <audio id="a1" controls autoplay loop>
+        <source src="不知所措.mp3">
+    </audio>
+    </div>
+</body>
+
 </html>
